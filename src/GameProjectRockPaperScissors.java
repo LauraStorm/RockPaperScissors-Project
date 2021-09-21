@@ -6,10 +6,10 @@ public class GameProjectRockPaperScissors {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //Intro
-        String welcomeForPlayer = "Welcome to Rock, Paper & Scissors game! 🙃";
+        String welcomeForPlayer = "Welcome to Rock, Paper & Scissors game! 🙃\n";
         System.out.println(welcomeForPlayer);
 
-        //Chose singleplayer or multiplayer
+        //Choose singleplayer or multiplayer
         String playSingleOrMultiplayer = "Press 1 for singlePlayer - press 2 for multiplayer:";
         System.out.println(playSingleOrMultiplayer);
         int singlePlayerOrMultiplayer = scanner.nextInt();
@@ -24,19 +24,20 @@ public class GameProjectRockPaperScissors {
 
     }
 
-    //Methods//
+        //Methods//
 
     public static void singlePlayer(){
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
         //INTRO
-        String introForSinglePlayer = "Hi 👋🏽 - Welcome to rock 🪨, paper 📃 & scissors ✂️!\nYou chose singleplayer!";
+        System.out.println("-------------------------------------------------------");
+        String introForSinglePlayer = "Hi 👋🏽 - Welcome to rock 🪨, paper 📃 & scissors ✂️ game!\nYou chose singleplayer!";
         System.out.println(introForSinglePlayer);
-        System.out.println("Please type your name:");
+        System.out.println("\nPlease write your name:");
         String singlePlayerName = scanner.next();
 
-        String welcomeSinglePlayer = "Hey " + singlePlayerName + "! \nI hope ypu are ready to play a round! 🙃";
+        String welcomeSinglePlayer = "Hey " + singlePlayerName + "! \nI hope you are ready to play a round! 🙃\n";
         System.out.println(welcomeSinglePlayer);
 
         //Array with options in game
@@ -57,12 +58,14 @@ public class GameProjectRockPaperScissors {
         int singlePlayerChoice;
         int computerChoice;
 
+
         //First input from Player
         singlePlayerChoice = scanner.nextInt();
         computerChoice = random.nextInt(optionsInGameIndex.length);
 
+
         //Print what player and computer choose:
-        System.out.println(singlePlayerName + " chose " + singlePlayerChoice);
+        System.out.println(singlePlayerName + " you chose " + singlePlayerChoice);
         System.out.println("The computer chose " + computerChoice);
 
 
@@ -82,18 +85,15 @@ public class GameProjectRockPaperScissors {
         Scanner scanner = new Scanner(System.in);
 
         //INTRO
-        String introForMultiplayer = "Hi 👋🏽 - Welcome to rock 🪨, paper 📃 & scissors ✂️!\nYou chose multiplayer!";
+        System.out.println("-------------------------------------------------------");
+        String introForMultiplayer = "Hi 👋🏽 - Welcome to rock 🪨, paper 📃 & scissors ✂️ game!\nYou chose multiplayer!\n";
         System.out.println(introForMultiplayer);
+
+        //players
         System.out.println("Please write the name of the first player:");
         String playerOne = scanner.next();
-
         System.out.println("Please write the name of the second player:");
         String playerTwo = scanner.next();
-
-
-        //Array with options in game
-        String [] optionsInGame = {"1. Rock", "2. Paper", "3. Scissors"};
-        int [] optionInGameIndex = new int[optionsInGame.length+1];
 
         int rock = 1;
         int paper = 2;
@@ -102,8 +102,12 @@ public class GameProjectRockPaperScissors {
         int playerOneChoice;
         int playerTwoChoice;
 
+        //Array with options in game
+        String [] optionsInGame = {"1. Rock", "2. Paper", "3. Scissors"};
+        int [] optionInGameIndex = new int[optionsInGame.length];
+
         //PlayerOne choice
-        System.out.println( playerOne + " you choose first!");
+        System.out.println( "\n" + playerOne + " you choose first!");
         System.out.println("Please type the number of your choice: ");
 
         for (String option : optionsInGame) {
