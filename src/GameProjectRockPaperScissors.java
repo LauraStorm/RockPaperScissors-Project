@@ -42,7 +42,7 @@ public class GameProjectRockPaperScissors {
 
         //Array with options in game
         String [] optionsInGame = {"1. Rock 🪨", "2. Paper 📃", "3. Scissors ✂️"};
-        int [] optionsInGameIndex = new int[optionsInGame.length];
+        int [] optionsInGameIndex = new int[3];
 
         //Print options for Player
         System.out.println("Please type the number of your choice:");
@@ -61,7 +61,7 @@ public class GameProjectRockPaperScissors {
 
         //First input from Player
         singlePlayerChoice = scanner.nextInt();
-        computerChoice = random.nextInt(optionsInGameIndex.length);
+        computerChoice = random.nextInt(3)+1;
 
 
         //Print what player and computer choose:
@@ -73,7 +73,7 @@ public class GameProjectRockPaperScissors {
         if (singlePlayerChoice == computerChoice){
             System.out.println("It's a draw");
         } else if (singlePlayerChoice == rock && computerChoice == scissors || singlePlayerChoice == paper && computerChoice == rock || singlePlayerChoice == scissors && computerChoice == paper ){
-            System.out.println(singlePlayerName + "yeaah you won! 🥳");
+            System.out.println(singlePlayerName + " yeaah you won! 🥳");
         } else {
             System.out.println("The computer won!");
         }
@@ -104,7 +104,7 @@ public class GameProjectRockPaperScissors {
 
         //Array with options in game
         String [] optionsInGame = {"1. Rock", "2. Paper", "3. Scissors"};
-        int [] optionInGameIndex = new int[optionsInGame.length];
+        int [] optionInGameIndex = new int[3];
 
         //PlayerOne choice
         System.out.println( "\n" + playerOne + " you choose first!");
@@ -144,8 +144,6 @@ public class GameProjectRockPaperScissors {
 
 
     }
-
-
 
 
 }
